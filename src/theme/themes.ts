@@ -1,4 +1,6 @@
-export const ClearTheme = {
+import { DefaultTheme } from "styled-components";
+
+export const ClearTheme: DefaultTheme = {
   background: "#ede8e2",
   title: {
     color: "#BD3944",
@@ -12,7 +14,7 @@ export const ClearTheme = {
   },
 };
 
-export const DarkTheme = {
+export const DarkTheme: DefaultTheme = {
   background: "#110E24",
   title: {
     color: "#EAFDF9",

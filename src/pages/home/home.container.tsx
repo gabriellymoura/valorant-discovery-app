@@ -2,21 +2,39 @@ import styled from "styled-components";
 import { Agent } from "./components/agent.component";
 import { InfoInitial } from "./components/info-initial.component";
 
-export const HomeContainer = () => {
+export const HomeContainer: React.FC<{ toggleTheme: () => void }> = ({
+  toggleTheme,
+}) => {
   return (
     <Wrapper>
-      <InfoInitial />
-      <Agent />
-      {/* <img src="https://valorant.fandom.com/wiki/Sprays" /> */}
+      <ButtonTheme onClick={toggleTheme}>change theme? click me</ButtonTheme>
+      <div>
+        <InfoInitial />
+        <Agent />
+        {/* <img src="https://valorant.fandom.com/wiki/Sprays" /> */}
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  background-color: #ede8e2;
+  background-color: ${({ theme }) => theme.background};
   width: 100%;
   height: 100vh;
-  padding: 150px 300px;
-  display: flex;
-  justify-content: space-between;
+
+  > div {
+    padding: 145px 300px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+const ButtonTheme = styled.button`
+  all: unset;
+  height: 35px;
+  padding: 5px;
+
+  color: ${({ theme }) => theme.title};
+  border: 1px solid ${({ theme }) => theme.title};
+  cursor: pointer;
 `;

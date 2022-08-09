@@ -26,6 +26,7 @@ const ValorantName = styled.div`
 
   > span {
     font-size: 40px;
+    color: ${({ theme }) => theme.valorant};
   }
 `;
 const Title = styled.span`

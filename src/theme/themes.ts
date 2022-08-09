@@ -11,7 +11,7 @@ export const ClearTheme = {
 
 export const DarkTheme = {
   background: "#110E24",
-  title: "##EAFDF9",
+  title: "#EAFDF9",
   valorant: "#F94555",
   button: {
     color: "#fff",

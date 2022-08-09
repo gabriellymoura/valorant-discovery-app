@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   height: 100vh;
 
   > div {
-    padding: 145px 300px 0;
+    padding: 50px 90px 0;
     display: flex;
     justify-content: space-between;
   }
@@ -34,7 +34,7 @@ const ButtonTheme = styled.button`
   height: 35px;
   padding: 5px;
 
-  color: ${({ theme }) => theme.title};
-  border: 1px solid ${({ theme }) => theme.title};
+  color: ${({ theme }) => theme.title.color};
+  border: 1px solid ${({ theme }) => theme.title.color};
   cursor: pointer;
 `;

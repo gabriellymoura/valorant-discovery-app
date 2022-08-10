@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { Agent } from "./components/agent.component";
 import { InfoInitial } from "./components/info-initial.component";
+import { ToggleTheme } from "./components/toggle-theme.component";
 
-export const HomeContainer: React.FC<{ toggleTheme: () => void }> = ({
-  toggleTheme,
-}) => {
+export const HomeContainer: React.FC<{
+  isLightTheme: boolean;
+  changeTheme: () => void;
+}> = ({ changeTheme, isLightTheme }) => {
   return (
     <Wrapper>
-      <ButtonTheme onClick={toggleTheme}>change theme? click me</ButtonTheme>
+      <ToggleTheme isLightTheme={isLightTheme} changeTheme={changeTheme} />
       <div>
         <InfoInitial />
         <Agent />
@@ -19,22 +21,14 @@ export const HomeContainer: React.FC<{ toggleTheme: () => void }> = ({
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.background};
-  width: 100%;
-  height: 100vh;
+
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
 
   > div {
     padding: 50px 90px 0;
     display: flex;
     justify-content: space-between;
   }
-`;
-
-const ButtonTheme = styled.button`
-  all: unset;
-  height: 35px;
-  padding: 5px;
-
-  color: ${({ theme }) => theme.title.color};
-  border: 1px solid ${({ theme }) => theme.title.color};
-  cursor: pointer;
 `;

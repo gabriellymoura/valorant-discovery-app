@@ -20,6 +20,7 @@ const Wrapper = styled.div``;
 const ValorantLogo = styled(LogoVava)`
   height: 3.4rem;
   fill: ${({ theme }) => theme.valorant};
+  transition: fill 0.5s ease;
 `;
 const ValorantName = styled.div`
   display: flex;
@@ -30,13 +31,15 @@ const ValorantName = styled.div`
   > span {
     font-size: 2.5rem;
     color: ${({ theme }) => theme.valorant};
+    transition: color 0.5s ease;
   }
 `;
 const Title = styled.span`
   font-size: 8rem;
   color: ${({ theme }) => theme.title.color};
 
-  text-shadow: ${({ theme }) => theme.title.shadow}; ;
+  text-shadow: ${({ theme }) => theme.title.shadow};
+  transition: text-shadow 0.5s ease;
 `;
 
 const InitButton = styled.button`
@@ -48,6 +51,8 @@ const InitButton = styled.button`
 
   background-color: ${({ theme }) => theme.button.background};
   color: ${({ theme }) => theme.button.color};
+
+  transition: background-color 0.5s, ease color 0.5s ease;
 
   display: flex;
   align-items: center;

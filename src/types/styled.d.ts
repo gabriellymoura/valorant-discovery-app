@@ -15,5 +15,9 @@ declare module "styled-components" {
       background: string;
       hover: string;
     };
+    toggle: {
+      background: string;
+      icon: string;
+    };
   }
 }

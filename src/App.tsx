@@ -1,23 +1,28 @@
 import { HomeContainer } from "./pages/home/home.container";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { ClearTheme, DarkTheme } from "./theme/themes";
+import { LightTheme, DarkTheme } from "./theme/themes";
 import { useState } from "react";
 
 function App() {
-  const [isClearTheme, setIsClearTheme] = useState(true);
+  const [isLightTheme, setIsLightTheme] = useState(true);
 
-  const toggleTheme = () => {
-    setIsClearTheme((oldTheme) => !oldTheme);
+  const changeTheme = () => {
+    setIsLightTheme((oldTheme) => !oldTheme);
   };
 
   return (
-    <ThemeProvider theme={isClearTheme ? ClearTheme : DarkTheme}>
+    <ThemeProvider theme={isLightTheme ? LightTheme : DarkTheme}>
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
-            element={<HomeContainer toggleTheme={toggleTheme} />}
+            element={
+              <HomeContainer
+                isLightTheme={isLightTheme}
+                changeTheme={changeTheme}
+              />
+            }
           />
           <Route path="/lala" element={<div>lala</div>} />
         </Routes>

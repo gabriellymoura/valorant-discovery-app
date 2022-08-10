@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-export const ClearTheme: DefaultTheme = {
+export const LightTheme: DefaultTheme = {
   background: "#ede8e2",
   title: {
     color: "#BD3944",
@@ -11,6 +11,10 @@ export const ClearTheme: DefaultTheme = {
     color: "#fff",
     background: "#BD3944",
     hover: "#71242b",
+  },
+  toggle: {
+    background: "#BD3944",
+    icon: "#ede8e2",
   },
 };
 
@@ -25,5 +29,9 @@ export const DarkTheme: DefaultTheme = {
     color: "#fff",
     background: "#BD3944",
     hover: "#71242b",
+  },
+  toggle: {
+    background: "#EAFDF9",
+    icon: "#110E24",
   },
 };

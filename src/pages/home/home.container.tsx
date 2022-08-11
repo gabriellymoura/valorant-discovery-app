@@ -12,7 +12,7 @@ export const HomeContainer: React.FC<{
       <ToggleTheme isLightTheme={isLightTheme} changeTheme={changeTheme} />
       <div>
         <InfoInitial />
-        <Agent />
+        <Agent isLightTheme={isLightTheme} />
         {/* <img src="https://valorant.fandom.com/wiki/Sprays" /> */}
       </div>
     </Wrapper>

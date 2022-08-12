@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../../assets/valorant-logo-black.png";
 import { ReactComponent as LogoVava } from "../../../assets/valorant.svg";
@@ -11,12 +12,18 @@ export const InfoInitial = () => {
         <span>VALORANT</span>
       </ValorantName>
       <Title>DISCOVERY</Title>
-      <InitButton>INICIAR</InitButton>
+      <Link to={"/agents"}>
+        <InitButton>INICIAR</InitButton>
+      </Link>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  > a {
+    all: unset;
+  }
+`;
 const ValorantLogo = styled(LogoVava)`
   height: 3.4rem;
   fill: ${({ theme }) => theme.valorant};

@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-          <Route path="/lala" element={<div>lala</div>} />
+          <Route path="/agents" element={<div>oi recruta</div>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

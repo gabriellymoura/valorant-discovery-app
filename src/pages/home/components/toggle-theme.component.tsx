@@ -1,15 +1,10 @@
-import { useEffect } from "react";
 import styled, { css } from "styled-components";
 import { ReactComponent as MoonIcon } from "../../../assets/moon.svg";
 import { ReactComponent as SunIcon } from "../../../assets/sun.svg";
+import { useThemeCustom } from "../../../hook/theme-context";
 
-export const ToggleTheme: React.FC<{
-  isLightTheme: boolean;
-  changeTheme: () => void;
-}> = ({ isLightTheme, changeTheme }) => {
-  useEffect(() => {
-    console.log("alguma coisa vai acontecer aqui e n sei oq é");
-  }, [isLightTheme]);
+export const ToggleTheme = () => {
+  const { changeTheme, isLightTheme } = useThemeCustom();
 
   return (
     <ToggleWrapper>

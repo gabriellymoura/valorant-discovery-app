@@ -3,16 +3,13 @@ import { Agent } from "./components/agent.component";
 import { InfoInitial } from "./components/info-initial.component";
 import { ToggleTheme } from "./components/toggle-theme.component";
 
-export const HomeContainer: React.FC<{
-  isLightTheme: boolean;
-  changeTheme: () => void;
-}> = ({ changeTheme, isLightTheme }) => {
+export const HomeContainer = () => {
   return (
     <Wrapper>
-      <ToggleTheme isLightTheme={isLightTheme} changeTheme={changeTheme} />
+      <ToggleTheme />
       <div>
         <InfoInitial />
-        <Agent isLightTheme={isLightTheme} />
+        <Agent />
         {/* <img src="https://valorant.fandom.com/wiki/Sprays" /> */}
       </div>
     </Wrapper>

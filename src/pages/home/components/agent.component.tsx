@@ -2,12 +2,11 @@ import styled, { css } from "styled-components";
 import Sage from "../../../assets/sage-agent.png";
 import Raze from "../../../assets/raze-agent.png";
 import Yoru from "../../../assets/yoru-agent.png";
+import { useThemeCustom } from "../../../hook/theme-context";
 
-export const Agent: React.FC<{
-  isLightTheme: boolean;
-}> = ({ isLightTheme }) => {
-  // return <AgentImage src={OmenGif} />;
-  // return <AgentImage src={YoruGif} />;
+export const Agent = () => {
+  const { isLightTheme } = useThemeCustom();
+
   return (
     <Images>
       {isLightTheme ? (

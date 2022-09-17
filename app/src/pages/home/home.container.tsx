@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Agent } from "./components/agent.component";
 import { InfoInitial } from "./components/info-initial.component";
-import { ToggleTheme } from "./components/toggle-theme.component";
+import { ToggleTheme } from "../../components/toggle-theme.component";
 
 export const HomeContainer = () => {
   return (
@@ -17,9 +17,6 @@ export const HomeContainer = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.background};
-
-  transition: background-color 0.5s ease;
   display: flex;
   flex-direction: column;
 

@@ -2,36 +2,38 @@ import styled from "styled-components";
 import iniciatorImg from "../../../assets/iniciator.svg";
 import fadeImg from "../../../assets/fadeicon.png";
 
-const AgentCard = () => {
+const AgentCard: React.FC<Agent> = ({
+  ability,
+  agentImage,
+  name,
+  role,
+  description,
+}) => {
   return (
     <Wrapper>
       <AgentDisplay>
-        <AgentImage src={fadeImg} />
-        <AgentName>FADE</AgentName>
+        <AgentImage src={agentImage} />
+        <AgentName>{name}</AgentName>
         <AgentTypeLogo>
-          <img src={iniciatorImg} />
+          <img src={role.displayIcon} />
         </AgentTypeLogo>
-        <AgentType>INICIATOR</AgentType>
+        <AgentType>{role.name}</AgentType>
       </AgentDisplay>
       <Description>
-        <p>
-          Turkish bounty hunter Fade unleashes the power of raw nightmare to
-          seize enemy secrets. Attuned with terror itself, she hunts down
-          targets and reveals their deepest fears - before crushing them in the
-          dark
-        </p>
+        <p>{description}</p>
       </Description>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 300px;
+  width: 290px;
   height: max-content;
   background-color: #bd3944;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 1rem;
+  cursor: pointer;
 `;
 
 const AgentDisplay = styled.div`
@@ -48,8 +50,8 @@ const AgentDisplay = styled.div`
 `;
 
 const AgentImage = styled.img`
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 12px;
   grid-area: image;
 `;
@@ -80,7 +82,7 @@ const AgentName = styled.span`
   grid-area: name;
 `;
 const Description = styled.div`
-  margin-top: 36px;
+  margin-top: 25px;
   background: #0f1923;
   padding: 1rem;
 

@@ -31,7 +31,7 @@ const ToggleWrapper = styled.label`
   display: block;
 
   align-self: flex-end;
-  margin: 1rem 3rem;
+  margin: 1rem 0;
 `;
 
 const HiddenSpan = styled.span`
